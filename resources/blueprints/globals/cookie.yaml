@@ -1,0 +1,113 @@
+sections:
+  main:
+    display: 'Cookie and Analytics'
+    fields:
+      -
+        handle: enable_cookies
+        field:
+          default: false
+          display: 'Enable Cookies'
+          type: toggle
+          icon: toggle
+          instructions: 'This will enable cookies, a popup will be shown to users to accept/reject them.'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: cookie_name
+        field:
+          placeholder: 'Name of the cookie, website name is recommended.'
+          input_type: text
+          antlers: false
+          display: 'Cookie Name'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          validate:
+            - required
+      -
+        handle: expiration
+        field:
+          input_type: number
+          antlers: false
+          default: '180'
+          display: Expiration
+          type: text
+          icon: text
+          instructions: 'Cookie expiration in days, default 180.'
+          listable: hidden
+          instructions_position: above
+          validate:
+            - required
+            - numeric
+      -
+        handle: analytics
+        field:
+          display: Analytics
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+      -
+        handle: tracking_code
+        field:
+          input_type: text
+          antlers: false
+          display: 'Tracking Code'
+          type: text
+          icon: text
+          instructions: 'Google Analytics Tracking Code.'
+          listable: hidden
+          instructions_position: above
+  cookie_popup:
+    display: 'Cookie Popup'
+    fields:
+      -
+        handle: cookie_text
+        field:
+          input_type: text
+          antlers: false
+          default: 'Here are some cookies.'
+          display: 'Cookie Text'
+          type: text
+          icon: text
+          instructions: 'Enter the Cookie Text used in the popup.'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: cookie_description
+        field:
+          antlers: false
+          default: 'This website uses cookies only for statistical purposes.'
+          display: 'Cookie Description'
+          type: textarea
+          icon: textarea
+          instructions: 'Explain what will the cookies will be used for.'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: accept_button
+        field:
+          input_type: text
+          antlers: false
+          default: Accept
+          display: 'Accept Button'
+          type: text
+          icon: text
+          instructions: 'Title for Accept'
+          width: 50
+          listable: hidden
+          instructions_position: above
+      -
+        handle: reject_button
+        field:
+          input_type: text
+          antlers: false
+          default: Reject
+          display: 'Reject Button'
+          type: text
+          icon: text
+          instructions: 'Title for Reject Button'
+          listable: hidden
+          instructions_position: above
+          width: 50

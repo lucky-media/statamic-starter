@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ seotamic }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+
+    <script src="{{ mix src='/js/site.js' }}" defer></script>
+
+    {{ if cookie:enable_cookies && environment === 'production' }}
+        {{ partial:partials/cookie_script }}
+    {{ /if }}
+</head>
+
+<body
+    class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ? 'debug-screens' : null }}">
+
+    {{ partial:layout/navigation }}
+
+    {{ template_content }}
+
+    {{ partial:layout.footer }}
+
+    {{ if cookie:enable_cookies && environment === 'local' }}
+        {{ partial:partials/cookie }}
+    {{ /if }}
+
+</body>
+
+</html>

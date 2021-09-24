@@ -1,0 +1,9 @@
+{
+    "name": "my-vendor-name/statamicstarter",
+    "extra": {
+        "statamic": {
+            "name": "Statamicstarter",
+            "description": "Statamicstarter starter kit"
+        }
+    }
+}

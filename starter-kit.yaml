@@ -1,0 +1,24 @@
+export_paths:
+  - app/ViewModels
+  - content/assets
+  - content/globals
+  - content/navigation
+  - content/trees
+  - content/collections/pages.yaml
+  - content/collections/pages/home.md
+  - config/statamic/assets.php
+  - resources/fieldsets
+  - resources/blueprints
+  - resources/css
+  - resources/js
+  - resources/views
+  - routes/web.php
+  - public/assets
+  - package.json
+  - tailwind.config.js
+  - webpack.mix.js
+  - flexgap.js
+  - .gitignore
+  - README.md
+dependencies:
+  cnj/seotamic: ^2.0

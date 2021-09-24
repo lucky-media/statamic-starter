@@ -1,0 +1,10 @@
+<div class="container my-10">
+    <div class="lg:col-8">
+        <div class="relative overflow-hidden pt-[56.25%]">
+            {{ if video | is_embeddable }}
+                <iframe src="{{ video | embed_url }}" frameborder="0" allowfullscreen
+                    class="absolute inset-0 w-full h-full border-0"></iframe>
+            {{ /if }}
+        </div>
+    </div>
+</div>

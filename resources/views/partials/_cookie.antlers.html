@@ -1,0 +1,20 @@
+<div id="cookie_wrapper"
+    class="hidden fixed z-50 inset-x-[1rem] bottom-[1rem] md:bottom-[2rem] md:w-80 flex-col p-6 space-y-4 bg-white border border-gray-100 rounded shadow-lg md:left-auto md:right-[2rem]">
+    <h2 class="text-2xl font-bold">
+        {{ cookie:cookie_text }}
+    </h2>
+    <p class="text-sm text-gray-600">
+        {{ cookie:cookie_description }}
+    </p>
+    <div class="flex space-x-4">
+        <button type="button" id="cookie_accept"
+            class="px-4 py-2 text-sm font-bold text-white bg-pink-700 rounded focus:outline-none focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary motion-safe:transition">
+            {{ cookie:accept_button }}
+        </button>
+
+        <button type="button" id="cookie_reject"
+            class="px-1 py-2 text-sm font-bold rounded text-neutral focus:outline-none focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary motion-safe:transition">
+            {{ cookie:reject_button }}
+        </button>
+    </div>
+</div>

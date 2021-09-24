@@ -1,0 +1,27 @@
+---
+base: 'group inline-flex items-center justify-center px-2 py-1 border border-transparent rounded-md hover:shadow-md transition-all ease-in-out duration-300'
+colors:
+  red: 'bg-red-500 hover:bg-white hover:border-red-500'
+  gray: 'bg-gray-800  hover:bg-white hover:border-gray-800'
+  blue: 'bg-white hover:bg-blue-900 hover:border-blue-400'
+text:
+  red: 'text-white group-hover:text-red-500'
+  gray: 'text-white group-hover:text-gray-800'
+  blue: 'text-blue-900 group-hover:text-white'
+---
+
+{{ if url }}
+    <a href="{{ url }}"
+        class="{{ view }} {{ base }} {{ colors[color] }} {{ /view }}">
+        <span class="{{ view:text[color] }}">
+            {{ title }}
+        </span>
+    </a>
+{{ else }}
+    <button type="{{ button_type || 'submit' }}"
+        class="{{ view }} {{ base }} {{ colors[color] }} {{ /view }}">
+        <span class="{{ view:text[color] }}">
+            {{ title }}
+        </span>
+    </button>
+{{ /if }}

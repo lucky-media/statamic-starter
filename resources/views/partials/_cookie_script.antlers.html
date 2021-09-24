@@ -1,0 +1,48 @@
+<script src="https://www.googletagmanager.com/gtag/js?id={{ cookie:tracking_code }}" defer></script>
+<script type="text/javascript" defer>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', '{{ cookie:tracking_code }}', {
+        page_path: window.location.pathname,
+    });
+</script>
+<script type="module" defer>
+    const Cookie = {
+        name: '{{ cookie:cookie_name }}',
+        expires: Number('{{ cookie:expiration }}'),
+        cookie_wrapper: document.getElementById('cookie_wrapper'),
+        hidePopup: () => {
+            Cookie.cookie_wrapper.classList.add('hidden');
+            Cookie.cookie_wrapper.classList.remove('flex');
+        },
+        showPopup: () => {
+            Cookie.cookie_wrapper.classList.add('flex');
+            Cookie.cookie_wrapper.classList.remove('hidden');
+        }
+    }
+
+    if (window.Cookie.get(Cookie.name) === undefined) {
+        Cookie.showPopup();
+
+        const accept_btn = document.getElementById('cookie_accept');
+        const reject_btn = document.getElementById('cookie_reject');
+
+        accept_btn.addEventListener('click', () => {
+            window.Cookie.set(Cookie.name, 'false', {
+                expires: Cookie.expires,
+            });
+
+            Cookie.hidePopup();
+        })
+
+        reject_btn.addEventListener('click', () => {
+            Cookie.hidePopup();
+        })
+    }
+</script>
