@@ -1,9 +1,9 @@
 {
-    "name": "my-vendor-name/statamicstarter",
+    "name": "lucky-media/statamic-starter",
     "extra": {
         "statamic": {
-            "name": "Statamicstarter",
-            "description": "Statamicstarter starter kit"
+            "name": "Statamic Starter",
+            "description": "An opinionated Statamic Starter for usage in our projects at Lucky Media."
         }
     }
 }
