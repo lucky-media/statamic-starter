@@ -20,10 +20,9 @@ An opinionated Statamic Starter for usage in our projects at Lucky Media.
     -   Custom Flex Gap plugin is used for gap functionality for older browsers / Safari.
 -   Alpine JS is used for small interactions
 
-## Installation instructions
+## Installation
 
--   `composer install`
--   `php please make:user`
+-   `statamic new my-site lucky-media/statamic-starter`
 -   `npm install` && `npm run watch`
 
 ## NGINX config
