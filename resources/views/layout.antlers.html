@@ -28,7 +28,7 @@
 
     {{ partial:layout.footer }}
 
-    {{ if cookie:enable_cookies && environment === 'local' }}
+    {{ if cookie:enable_cookies && environment === 'production' }}
         {{ partial:partials/cookie }}
     {{ /if }}
 
