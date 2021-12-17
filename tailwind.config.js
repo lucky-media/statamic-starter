@@ -1,17 +1,13 @@
 module.exports = {
-    mode: 'jit',
-    purge: {
-        content: [
-            './resources/**/*.antlers.html',
-            './resources/**/*.blade.php',
-            './content/**/*.md'
-        ]
-    },
-    important: true,
+    content: [
+        "./resources/**/*.antlers.html",
+        "./resources/**/*.blade.php",
+        "./content/**/*.md",
+    ],
     theme: {
         extend: {
             fontFamily: {
-                sans: 'Poppins, -apple-system, BlinkMacSystemFont',
+                sans: "Poppins, -apple-system, BlinkMacSystemFont",
             },
         },
     },
@@ -27,7 +23,7 @@ module.exports = {
                 xl: "1280px",
                 "2xl": "1280px",
             },
-            gridGutterWidth: "2rem"
+            gridGutterWidth: "2rem",
         }),
         require("@tailwindcss/typography"),
         require("@tailwindcss/forms"),
@@ -38,4 +34,4 @@ module.exports = {
         // Flex Gap plugin
         require("./flexgap"),
     ],
-}
+};
