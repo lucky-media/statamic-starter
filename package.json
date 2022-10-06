@@ -18,7 +18,7 @@
         "laravel-mix": "^6.0.39",
         "postcss": "^8.4.5",
         "postcss-import": "^14.0.2",
-        "postcss-nested": "^5.0.6",
+        "postcss-nested": "^6.0.0",
         "postcss-preset-env": "^7.0.2",
         "tailwind-bootstrap-grid": "^5.0.0",
         "tailwindcss": "^3.0.6",
