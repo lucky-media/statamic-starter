@@ -1,21 +1,20 @@
 <div class="container">
-    <div class="row">
-        <div class="py-10 col-7">
-            <div class="space-x-5">
-                {{ partial:components/button title="Button" color="red" }}
-                {{ partial:components/button title="Button" color="gray" }}
-                {{ partial:components/button title="Button" color="blue" }}
-            </div>
+    <div class="max-w-lg mx-auto">
+        <div class="space-x-5">
+            {{ partial:components/button title="Button" color="red" }}
+            {{ partial:components/button title="Button" color="gray" }}
+            {{ partial:components/button title="Button" color="blue" }}
+        </div>
 
-            <div class="pt-5 space-y-5">
-                {{ partial:components/heading size="h1" color="gray" label="Heading 1" }}
-                {{ partial:components/heading size="h2" color="gray" label="Heading 2" }}
-                {{ partial:components/heading size="h3" color="gray" label="Heading 3" }}
-                {{ partial:components/heading size="h4" color="gray" label="Heading 4" }}
-            </div>
+        <div class="pt-5 space-y-5">
+            {{ partial:components/heading size="h1" color="gray" label="Heading 1" }}
+            {{ partial:components/heading size="h2" color="gray" label="Heading 2" }}
+            {{ partial:components/heading size="h3" color="gray" label="Heading 3" }}
+            {{ partial:components/heading size="h4" color="gray" label="Heading 4" }}
         </div>
     </div>
 </div>
+
 
 {{ content }}
     {{ partial src="sets/{type}" }}

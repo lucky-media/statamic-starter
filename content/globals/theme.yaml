@@ -1,6 +1,4 @@
 title: Theme
 data:
   sitename: Starter
-  footer_copyright: 'Copyright 2021'
-  sitemap_change_frequency: weekly
-  sitemap_priority: 0.5
+  footer_copyright: 'Copyright {{ now format="Y" }}'

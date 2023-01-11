@@ -26,6 +26,27 @@ sections:
           instructions: 'Logo that will be displayed through the website, **SVG** is preferred.'
           width: 50
           listable: hidden
+      -
+        handle: footer_copyright
+        field:
+          input_type: text
+          antlers: true
+          display: 'Footer Copyright'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: footer_description
+        field:
+          antlers: false
+          display: 'Footer Description'
+          type: textarea
+          icon: textarea
+          instructions: 'Used in the footer under the logo'
+          listable: hidden
   social_media:
     display: 'Social Media'
     fields:
@@ -187,67 +208,3 @@ sections:
           max_files: 1
           validate:
             - image
-  footer:
-    display: Footer
-    fields:
-      -
-        handle: footer_copyright
-        field:
-          input_type: text
-          antlers: false
-          display: 'Footer Copyright'
-          type: text
-          icon: text
-          listable: hidden
-      -
-        handle: footer_description
-        field:
-          antlers: false
-          display: 'Footer Description'
-          type: textarea
-          icon: textarea
-          instructions: 'Used in the footer under the logo'
-          listable: hidden
-  sitemap:
-    display: Sitemap
-    fields:
-      -
-        handle: sitemap_collections
-        field:
-          mode: select
-          display: 'Sitemap Collections'
-          type: collections
-          icon: collections
-          listable: hidden
-      -
-        handle: sitemap_change_frequency
-        field:
-          options:
-            always: Always
-            hourly: Hourly
-            daily: Daily
-            weekly: Weekly
-            monthly: Monthly
-            yearly: Yearly
-            never: Never
-          clearable: false
-          multiple: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          type: select
-          instructions: 'How often to instruct search engines to crawl.'
-          width: 50
-          default: weekly
-          listable: hidden
-          display: 'Change frequency'
-      -
-        handle: sitemap_priority
-        field:
-          type: text
-          display: Priority
-          default: 0.5
-          instructions: 'Valid values range from 0.0 to 1.0. This value does not affect how your pages are compared to pages on other sites, it only lets the search engines know which pages you deem most important for the crawlers.'
-          width: 50
-          listable: hidden

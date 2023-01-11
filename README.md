@@ -9,21 +9,19 @@ An opinionated Statamic Starter for usage in our projects at Lucky Media.
 -   Two components added to encourage composable Components such as a Button and Typography.
 -   Global Theme settings such as Sitename, Social Media and Footer settings.
 -   Responsive Image added based on the great partial from Statamic Peak.
--   Full blown Cookie Management with support for Google Analytics straight from CP.
--   SEO Management with the Seotamic Addon, dynamic OG Image ViewModel is included.
+-   Simple SEO Management
 -   Favicons and Sitemap Generation
+-   Vite
 -   Tailwind CSS with some included plugins like:
     -   Tailwind Typography
     -   Tailwind Forms
     -   Debug Screens
-    -   Bootstrap Grid is used for convenience
-    -   Custom Flex Gap plugin is used for gap functionality for older browsers / Safari.
 -   Alpine JS is used for small interactions
 
 ## Installation
 
 -   `statamic new my-site lucky-media/statamic-starter`
--   `npm install` && `npm run watch`
+-   `npm install` && `npm run dev`
 
 ## NGINX config
 

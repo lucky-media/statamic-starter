@@ -3,16 +3,16 @@ id: home
 blueprint: pages
 title: Home
 template: home
-seotamic_title: title
-seotamic_title_prepend: true
-seotamic_title_append: true
-seotamic_meta_description: empty
-seotamic_open_graph_title: title
-seotamic_open_graph_description: general
-seotamic_twitter_title: title
-seotamic_twitter_description: general
-updated_by: e4a1f8f1-ea83-423b-9712-f16f8208fd86
-updated_at: 1632319814
+updated_by: 6deb3806-a10a-42a5-8ea7-173755208035
+updated_at: 1673361233
+seo_title: title
+seo_meta_description: empty
+seo_canonical: none
+seo_og_title: title
+seo_og_description: custom
+seo_custom_og_desc: asasdasdad
+seo_tw_title: title
+seo_tw_description: general
 content:
   -
     type: paragraph
@@ -65,6 +65,7 @@ content:
   -
     type: set
     attrs:
+      id: E2IHPsFT
       values:
         type: image
         image: bg_one.jpeg
@@ -78,6 +79,7 @@ content:
   -
     type: set
     attrs:
+      id: EMqv7EE4
       values:
         type: quote
         description: 'Hi this is a cool quote.'
@@ -91,6 +93,7 @@ content:
   -
     type: set
     attrs:
+      id: yI4iUwRi
       values:
         type: video
         video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
@@ -103,6 +106,7 @@ content:
   -
     type: set
     attrs:
+      id: m5VHFbjg
       values:
         type: gallery
         images:

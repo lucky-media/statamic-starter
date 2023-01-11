@@ -29,10 +29,10 @@
                 >
                 <img
                     {{ if cover }}
-                        class="object-cover w-full h-full {{ class }}"
+                        class="object-cover w-full h-full {{ lazy ?= 'lazy' }} {{ class }}"
                         style="object-position: {{ focus | background_position }}"
                     {{ else }}
-                        class="{{ class }}"
+                        class="{{ lazy ?= 'lazy' }} {{ class }}"
                     {{ /if }}
                     src="{{ glide:url preset='lg' }}"
                     alt="{{ alt ensure_right='.' }}"
