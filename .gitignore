@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/public/~partytown
 /public/vendor/statamic
 /storage/*.key
 /vendor
@@ -14,13 +15,9 @@ npm-debug.log
 yarn-error.log
 .DS_Store
 
-# Antlers
-/storage/antlers-language-server
-.antlers.json
-
 # Assets
-/public/js/*
-/public/css/*
-/public/mix-manifest.json
+/public/build/manifest.json
 /public/img/
 /public/static/
+/public/build/
+/public/fonts/

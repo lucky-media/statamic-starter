@@ -1,5 +1,7 @@
 export_paths:
+  - app/Tags
   - app/ViewModels
+  - app/Http/Controllers
   - content/assets
   - content/globals
   - content/navigation
@@ -7,6 +9,7 @@ export_paths:
   - content/collections/pages.yaml
   - content/collections/pages/home.md
   - config/statamic/assets.php
+  - config/statamic/antlers.php
   - resources/fieldsets
   - resources/blueprints
   - resources/css
@@ -16,9 +19,7 @@ export_paths:
   - public/assets
   - package.json
   - tailwind.config.js
-  - webpack.mix.js
-  - flexgap.js
+  - vite.config.js
+  - postcss.config.js
   - .gitignore
   - README.md
-dependencies:
-  cnj/seotamic: ^2.0

@@ -1,6 +1,6 @@
 {{ xml_header }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {{ theme:sitemap_collections }}
+    {{ seo:sitemap_collections }}
         {{ collection from="{handle}" as="results" }}
             {{ results }}
                 <url>
@@ -19,5 +19,5 @@
                 </url>
             {{ /results }}
         {{ /collection }}
-    {{ /theme:sitemap_collections }}
+    {{ /seo:sitemap_collections }}
 </urlset>

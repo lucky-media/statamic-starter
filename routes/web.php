@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DynamicToken;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ Route::statamic('/sitemap.xml', 'partials._sitemap', [
     'layout' => null
 ]);
 
+Route::get('/!/token/refresh', DynamicToken::class);
 
 Route::statamic('site.webmanifest', 'partials._manifest', [
     'layout' => null,

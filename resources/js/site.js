@@ -1,10 +1,9 @@
+import "@fontsource/poppins/latin-ext.css";
+import { Demo } from "./alpine/Demo";
 import Alpine from "alpinejs";
-import Cookie from 'js-cookie';
-// import CookieManager from './cookie'
 
-window.Cookie = Cookie;
 window.Alpine = Alpine;
 
-Alpine.start();
+Alpine.data("demo", Demo);
 
-// CookieManager.set({ name: 'Lokman' });
+Alpine.start();
