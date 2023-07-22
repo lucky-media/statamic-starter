@@ -40,6 +40,10 @@ map $sent_http_content_type $expires {
     ~image/    max;
     application/javascript    max;
     application/octet-stream    max;
+    application/font-woff      max;
+    application/font-woff2     max;
+    application/font-ttf      max;
+    font/woff2    max;
 }
 ```
 
