@@ -59,8 +59,7 @@ cd $FORGE_SITE_PATH
 git pull origin main
 $FORGE_COMPOSER install --no-interaction --prefer-dist --optimize-autoloader
 
-npm i
-npm run production
+npm ci && npm run build
 $FORGE_PHP artisan cache:clear
 $FORGE_PHP artisan route:cache
 $FORGE_PHP artisan statamic:stache:warm
