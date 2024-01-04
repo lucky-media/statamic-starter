@@ -4,6 +4,7 @@
 /public/~partytown
 /public/vendor/statamic
 /storage/*.key
+/.github
 /vendor
 .env
 .env.backup
