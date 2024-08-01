@@ -1,21 +1,24 @@
 <div class="container">
     <div class="max-w-lg mx-auto">
-        <div class="space-x-5">
-            {{ partial:components/button title="Button" color="red" }}
-            {{ partial:components/button title="Button" color="gray" }}
-            {{ partial:components/button title="Button" color="blue" }}
+        <div x-data="{ btn: 'hello world' }" class="flex flex-row space-x-5">
+            <x-button>Button Base</x-button>
+            <x-button variant="outline">
+                Button Outline
+            </x-button>
         </div>
 
         <div class="pt-5 space-y-5">
-            {{ partial:components/heading size="h1" color="gray" label="Heading 1" }}
-            {{ partial:components/heading size="h2" color="gray" label="Heading 2" }}
-            {{ partial:components/heading size="h3" color="gray" label="Heading 3" }}
-            {{ partial:components/heading size="h4" color="gray" label="Heading 4" }}
+            <x-heading size="h1">Heading 1</x-heading>
+            <x-heading size="h2">Heading 2</x-heading>
+            <x-heading size="h3">Heading 3</x-heading>
+            <x-heading size="h4">Heading 4</x-heading>
+            <x-heading size="h5">Heading 5</x-heading>
+            <x-heading size="h6">Heading 6</x-heading>
         </div>
     </div>
 </div>
 
 
-{{ content }}
+{{ builder }}
     {{ partial src="sets/{type}" }}
-{{ /content }}
+{{ /builder }}

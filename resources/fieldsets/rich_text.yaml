@@ -1,0 +1,17 @@
+title: 'Rich Text'
+fields:
+  -
+    handle: rich_text
+    field:
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+        - superscript
+        - subscript
+        - horizontalrule
+      toolbar_mode: floating
+      remove_empty_nodes: false
+      type: bard
+      display: Textarea

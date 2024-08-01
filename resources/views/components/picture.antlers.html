@@ -29,10 +29,10 @@
                 >
                 <img
                     {{ if cover }}
-                        class="object-cover w-full h-full {{ lazy ?= 'lazy' }} {{ class }}"
+                        class="object-cover w-full h-full {{ lazy ?= 'lazy' }} {{ class |  tw_merge }}"
                         style="object-position: {{ focus | background_position }}"
                     {{ else }}
-                        class="{{ lazy ?= 'lazy' }} {{ class }}"
+                        class="{{ lazy ?= 'lazy' }} {{ class |  tw_merge }}"
                     {{ /if }}
                     src="{{ glide:url preset='lg' }}"
                     alt="{{ alt ensure_right='.' }}"
