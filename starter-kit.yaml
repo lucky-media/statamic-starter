@@ -1,7 +1,6 @@
 export_paths:
   - app/Tags
-  - app/ViewModels
-  - app/Http/Controllers
+  - app/Http/Controllers/DynamicToken.php
   - content/assets
   - content/globals
   - content/navigation
@@ -23,3 +22,6 @@ export_paths:
   - postcss.config.js
   - .gitignore
   - README.md
+dependencies:
+  marcorieser/tailwind-merge-statamic: ^1.1
+  stillat/antlers-components: ^2.2
