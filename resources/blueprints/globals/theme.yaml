@@ -1,0 +1,210 @@
+sections:
+  main:
+    display: General
+    fields:
+      -
+        handle: sitename
+        field:
+          input_type: text
+          antlers: false
+          display: Sitename
+          type: text
+          icon: text
+          instructions: 'Used in the site title'
+          listable: hidden
+      -
+        handle: logo
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: Logo
+          type: assets
+          icon: assets
+          instructions: 'Logo that will be displayed through the website, **SVG** is preferred.'
+          width: 50
+          listable: hidden
+      -
+        handle: footer_copyright
+        field:
+          input_type: text
+          antlers: true
+          display: 'Footer Copyright'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: footer_description
+        field:
+          antlers: false
+          display: 'Footer Description'
+          type: textarea
+          icon: textarea
+          instructions: 'Used in the footer under the logo'
+          listable: hidden
+  social_media:
+    display: 'Social Media'
+    fields:
+      -
+        handle: social_media
+        field:
+          fields:
+            -
+              handle: name
+              field:
+                placeholder: 'Social Media Platform'
+                options:
+                  facebook: Facebook
+                  instagram: Instagram
+                  twitter: Twitter
+                  linkedin: Linkedin
+                  tiktok: 'Tik Tok'
+                  youtube: Youtube
+                  whatsapp: Whatsapp
+                  messenger: Messenger
+                  snapchat: Snapchat
+                  pinterest: Pinterest
+                  skype: Skype
+                  telegram: Telegram
+                  tumblr: Tumblr
+                  reddit: Reddit
+                  vk: Vk
+                multiple: false
+                max_items: 1
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: Name
+                type: select
+                icon: select
+                listable: hidden
+                instructions_position: above
+            -
+              handle: link
+              field:
+                input_type: text
+                antlers: false
+                display: Link
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                validate:
+                  - required
+          mode: table
+          reorderable: true
+          display: 'Social Media'
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+  favicon:
+    display: Favicon
+    fields:
+      -
+        handle: favicon
+        field:
+          mode: list
+          container: assets
+          folder: favicons
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Favicon
+          type: assets
+          icon: assets
+          instructions: 'Ico file for favicon'
+          listable: hidden
+      -
+        handle: favicon_256
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 256'
+          type: assets
+          icon: assets
+          instructions: 'PNG Format preffered, 256x256'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_192
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 192'
+          type: assets
+          icon: assets
+          instructions: 'PNG Format preffered, 192x192'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_180
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 180'
+          type: assets
+          icon: assets
+          instructions: 'Apple Touch Icon, PNG Format preffered, 180x180'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_32
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 32'
+          type: assets
+          icon: assets
+          instructions: 'Icon, PNG Format preffered, 32x32'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_16
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 16'
+          type: assets
+          icon: assets
+          instructions: 'Icon, PNG Format preffered, 16x16'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image

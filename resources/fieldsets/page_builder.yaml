@@ -1,0 +1,28 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: builder
+    field:
+      type: replicator
+      display: Builder
+      sets:
+        media:
+          display: Media
+          icon: media-image-picture-gallery
+          sets:
+            image:
+              display: Image
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: image
+        content:
+          display: Content
+          icon: content-book-open
+          sets:
+            content:
+              display: Article
+              icon: file-content-list
+              fields:
+                -
+                  import: article
