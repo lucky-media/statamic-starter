@@ -1,0 +1,6 @@
+title: SEO
+data:
+  meta_description: 'This is a meta description'
+  og_image: bg_one.jpeg
+  display_og_tags: true
+  display_twitter_tags: true
