@@ -120,21 +120,6 @@ class StarterKitPostInstall
         }
     }
 
-    protected function replaceInSites(string $search, string $replace): void
-    {
-        $this->sites = str_replace($search, $replace, $this->sites);
-    }
-
-    protected function replaceInEnv(string $search, string $replace): void
-    {
-        $this->env = str_replace($search, $replace, $this->env);
-    }
-
-    protected function appendToGitignore(string $toIgnore): void
-    {
-        app('files')->append(base_path('.gitignore'), "\n{$toIgnore}");
-    }
-
     protected function withSpinner(callable $callback, string $processingMessage = '', string $successMessage = ''): void
     {
         spin($callback, $processingMessage);
