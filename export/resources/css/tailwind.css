@@ -5,7 +5,7 @@
 @import "./typography.css";
 
 @theme {
-    --font-sans: Poppins;
+    --font-sans: "Poppins", sans-serif;
 }
 
 @utility container {
