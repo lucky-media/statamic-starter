@@ -78,7 +78,7 @@ fields:
       display: Canonical
       type: link
       instructions: 'By default it will be set to the page url'
-      width: 33
+      width: 50
       listable: hidden
       instructions_position: above
       visibility: visible
