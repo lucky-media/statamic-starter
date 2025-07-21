@@ -1,1 +1,29 @@
-/* This is all you. */
+@import 'tailwindcss';
+@source "../views";
+
+@import "./plugins.css";
+@import "./typography.css";
+
+@theme {
+    --font-sans: "Poppins", sans-serif;
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
