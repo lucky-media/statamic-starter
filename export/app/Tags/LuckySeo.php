@@ -61,17 +61,7 @@ class LuckySeo extends Tags
      */
     public function canonical()
     {
-        $canon_config = $this->context->raw('seo_canonical');
-
-        if ($canon_config === 'url') {
-            return $this->context->get('seo_canonical_url');
-        }
-
-        if($canon_config === 'entry') {
-            return $this->context->get('seo_canonical_custom_entry');
-        }
-
-        return $this->context->get('permalink');
+        return $this->context->raw('seo_canonical') ?  $this->context->get('seo_canonical') : $this->context->get('permalink');
     }
 
     /**
