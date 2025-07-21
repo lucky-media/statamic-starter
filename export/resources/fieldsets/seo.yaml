@@ -75,50 +75,14 @@ fields:
   -
     handle: seo_canonical
     field:
-      options:
-        none: None
-        url: URL
-        entry: Entry
-      default: none
       display: Canonical
-      type: button_group
-      icon: button_group
+      type: link
       instructions: 'By default it will be set to the page url'
-      width: 33
+      width: 50
       listable: hidden
       instructions_position: above
       visibility: visible
       always_save: false
-  -
-    handle: seo_canonical_url
-    field:
-      input_type: url
-      antlers: false
-      display: 'Canonical URL'
-      type: text
-      icon: text
-      width: 66
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      always_save: false
-      if:
-        seo_canonical: 'equals url'
-  -
-    handle: seo_canonical_custom_entry
-    field:
-      mode: default
-      create: true
-      display: 'Custom Entry'
-      type: entries
-      icon: entries
-      width: 66
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      always_save: false
-      if:
-        seo_canonical: 'equals entry'
   -
     handle: social
     field:

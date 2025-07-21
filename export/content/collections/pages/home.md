@@ -7,7 +7,6 @@ updated_by: d691b0ab-4b2b-412d-ab3e-86bc218d672f
 updated_at: 1722518306
 seo_title: title
 seo_meta_description: empty
-seo_canonical: none
 seo_og_title: title
 seo_og_description: custom
 seo_custom_og_desc: asasdasdad
