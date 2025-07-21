@@ -4,18 +4,11 @@
         {{ collection from="{handle}" as="results" }}
             {{ results }}
                 <url>
-                    <loc>
-                        {{ permalink }}
-                    </loc>
-                    <lastmod>
-                        {{ updated_at format="Y-m-d" }}
-                    </lastmod>
-                    <changefreq>
-                        {{ seo:sitemap_change_frequency ? seo:sitemap_change_frequency : 'weekly' }}
+                    <loc>{{ permalink }}</loc>
+                    <lastmod>{{ updated_at format="Y-m-d" }}</lastmod>
+                    <changefreq>{{ seo:sitemap_change_frequency ? seo:sitemap_change_frequency : 'weekly' }}
                     </changefreq>
-                    <priority>
-                        {{ seo:sitemap_priority ? seo:sitemap_priority : '0.5' }}
-                    </priority>
+                    <priority>{{ seo:sitemap_priority ? seo:sitemap_priority : '0.5' }}</priority>
                 </url>
             {{ /results }}
         {{ /collection }}

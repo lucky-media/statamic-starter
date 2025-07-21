@@ -15,7 +15,8 @@ use App\Http\Controllers\DynamicToken;
 */
 
 Route::statamic('/sitemap.xml', 'partials._sitemap', [
-    'layout' => null
+    'layout' => null,
+    'content_type' => 'application/xml',
 ]);
 
 Route::get('/!/token/refresh', DynamicToken::class);
