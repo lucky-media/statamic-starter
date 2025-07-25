@@ -5,6 +5,6 @@ import { defineConfig } from "vite";
 export default defineConfig({
     plugins: [
         tailwindcss(),
-        laravel(["resources/css/tailwind.css", "resources/js/site.js"]),
+        laravel(["resources/css/site.css", "resources/js/site.js"]),
     ],
 });
