@@ -9,7 +9,7 @@ seo_title: title
 seo_meta_description: empty
 seo_og_title: title
 seo_og_description: custom
-seo_custom_og_desc: asasdasdad
+seo_custom_og_desc: statamic starter
 seo_tw_title: title
 seo_tw_description: general
 builder:
