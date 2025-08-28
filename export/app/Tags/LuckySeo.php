@@ -68,10 +68,6 @@ class LuckySeo extends Tags
 
         $resolved = $value->value();
 
-        if (is_string($resolved) && !empty($resolved)) {
-            return $resolved;
-        }
-
         if ($resolved instanceof \Statamic\Fieldtypes\Link\ArrayableLink) {
             $entry = $resolved->value();
 
@@ -82,11 +78,6 @@ class LuckySeo extends Tags
             if (is_string($entry)) {
                 return $entry;
             }
-        }
-
-        // Case 3: direct Entry reference
-        if ($resolved instanceof \Statamic\Entries\Entry) {
-            return $resolved->absoluteUrl();
         }
 
         return $this->context->get('permalink');
