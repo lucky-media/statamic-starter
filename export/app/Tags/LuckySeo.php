@@ -3,6 +3,9 @@
 namespace App\Tags;
 
 use Statamic\Tags\Tags;
+use Statamic\Facades\Entry;
+
+
 
 class LuckySeo extends Tags
 {
@@ -51,7 +54,7 @@ class LuckySeo extends Tags
             return $this->context->get('seo_custom_meta_description');
         }
 
-         return null;
+        return null;
     }
 
     /**
@@ -61,7 +64,32 @@ class LuckySeo extends Tags
      */
     public function canonical()
     {
-        return $this->context->raw('seo_canonical') ?  $this->context->get('seo_canonical') : $this->context->get('permalink');
+        $value = $this->context->get('seo_canonical');
+
+        $resolved = $value->value();
+
+        if (is_string($resolved) && !empty($resolved)) {
+            return $resolved;
+        }
+
+        if ($resolved instanceof \Statamic\Fieldtypes\Link\ArrayableLink) {
+            $entry = $resolved->value();
+
+            if ($entry instanceof \Statamic\Entries\Entry) {
+                return $entry->absoluteUrl();
+            }
+
+            if (is_string($entry)) {
+                return $entry;
+            }
+        }
+
+        // Case 3: direct Entry reference
+        if ($resolved instanceof \Statamic\Entries\Entry) {
+            return $resolved->absoluteUrl();
+        }
+
+        return $this->context->get('permalink');
     }
 
     /**
@@ -160,3 +188,4 @@ class LuckySeo extends Tags
         }
     }
 }
+
