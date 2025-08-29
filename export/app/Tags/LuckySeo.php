@@ -3,9 +3,6 @@
 namespace App\Tags;
 
 use Statamic\Tags\Tags;
-use Statamic\Facades\Entry;
-
-
 
 class LuckySeo extends Tags
 {
@@ -145,7 +142,7 @@ class LuckySeo extends Tags
      *
      * @return string|array
      */
-        public function twDescription()
+    public function twDescription()
     {
         $desc_config = $this->context->raw('seo_tw_description');
 
@@ -179,4 +176,3 @@ class LuckySeo extends Tags
         }
     }
 }
-
