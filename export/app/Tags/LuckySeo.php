@@ -145,9 +145,9 @@ class LuckySeo extends Tags
      *
      * @return string|array
      */
-    public function twDescription()
+        public function twDescription()
     {
-        $desc_config = $this->context->raw('seo_og_description');
+        $desc_config = $this->context->raw('seo_tw_description');
 
         if ($desc_config === 'meta') {
             return $this->description();
@@ -159,7 +159,7 @@ class LuckySeo extends Tags
         }
 
         if($desc_config === 'custom') {
-            return $this->context->get('seo_custom_og_desc');
+            return $this->context->get('seo_custom_tw_desc');
         }
 
         return null;
