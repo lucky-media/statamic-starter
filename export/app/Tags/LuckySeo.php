@@ -23,12 +23,8 @@ class LuckySeo extends Tags
             $title = $this->context->get('seo_custom_meta_title');
         }
 
-        if ($append) {
-            return "$title - $append";
-        }
-
-        if($prepend) {
-            return "$prepend - $title";
+        if ($append || $prepend) {
+            return ($prepend ? "$prepend - " : '') . "$title" . ($append ? " - $append" : '');
         }
 
         return $title;
