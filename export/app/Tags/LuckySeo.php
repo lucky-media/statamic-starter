@@ -59,7 +59,7 @@ class LuckySeo extends Tags
     {
         $value = $this->context->get('seo_canonical');
 
-        $resolved = $value->value();
+        $resolved = $value?->value();
 
         if ($resolved instanceof \Statamic\Fieldtypes\Link\ArrayableLink) {
             $entry = $resolved->value();
