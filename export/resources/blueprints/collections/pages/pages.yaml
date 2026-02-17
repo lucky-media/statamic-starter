@@ -30,15 +30,6 @@ tabs:
               localizable: true
               validate:
                 - required
-          -
-            handle: parent
-            field:
-              type: entries
-              collections:
-                - pages
-              max_items: 1
-              listable: false
-              localizable: true
   seo:
     display: SEO
     sections:

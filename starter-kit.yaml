@@ -23,5 +23,4 @@ export_paths:
   - .env.example
   - README.md
 dependencies:
-  marcorieser/tailwind-merge-statamic: ^1.1
-  stillat/antlers-components: ^2.2
+  marcorieser/tailwind-merge-statamic: ^1.2.0

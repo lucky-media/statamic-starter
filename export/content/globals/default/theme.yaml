@@ -1,0 +1,2 @@
+sitename: Starter
+footer_copyright: 'Copyright {{ now format="Y" }}'
