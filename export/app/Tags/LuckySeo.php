@@ -23,12 +23,8 @@ class LuckySeo extends Tags
             $title = $this->context->get('seo_custom_meta_title');
         }
 
-        if ($append) {
-            return "$title - $append";
-        }
-
-        if($prepend) {
-            return "$prepend - $title";
+        if ($append || $prepend) {
+            return ($prepend ? "$prepend - " : '') . "$title" . ($append ? " - $append" : '');
         }
 
         return $title;
@@ -51,7 +47,7 @@ class LuckySeo extends Tags
             return $this->context->get('seo_custom_meta_description');
         }
 
-         return null;
+        return null;
     }
 
     /**
@@ -61,7 +57,23 @@ class LuckySeo extends Tags
      */
     public function canonical()
     {
-        return $this->context->raw('seo_canonical') ?  $this->context->get('seo_canonical') : $this->context->get('permalink');
+        $value = $this->context->get('seo_canonical');
+
+        $resolved = $value?->value();
+
+        if ($resolved instanceof \Statamic\Fieldtypes\Link\ArrayableLink) {
+            $entry = $resolved->value();
+
+            if ($entry instanceof \Statamic\Entries\Entry) {
+                return $entry->absoluteUrl();
+            }
+
+            if (is_string($entry)) {
+                return $entry;
+            }
+        }
+
+        return $this->context->get('permalink');
     }
 
     /**
@@ -128,7 +140,7 @@ class LuckySeo extends Tags
      */
     public function twDescription()
     {
-        $desc_config = $this->context->raw('seo_og_description');
+        $desc_config = $this->context->raw('seo_tw_description');
 
         if ($desc_config === 'meta') {
             return $this->description();
@@ -140,7 +152,7 @@ class LuckySeo extends Tags
         }
 
         if($desc_config === 'custom') {
-            return $this->context->get('seo_custom_og_desc');
+            return $this->context->get('seo_custom_tw_desc');
         }
 
         return null;
